@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset body and setup background grid effect */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #020205;
+    padding: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 0 32px;
+    background: rgba(6, 11, 19, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 100px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    gap: 12px;
+    user-select: none;
+}
+
+.icon-box {
+    width: 38px;
+    height: 38px;
+    background: rgba(56, 189, 248, 0.05);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box svg {
+    width: 20px;
+    height: 20px;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.blue-text {
+    color: #38bdf8;
+}
+
+/* Navigation Links Center Group */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-item {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+}
+
+/* Active link color and bottom cyan indicator line */
+.nav-item.active {
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #38bdf8;
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+/* Right Side Pill Button Styling */
+.btn-contact {
+    background-color: #ffffff;
+    color: #090d16;
+    border: none;
+    padding: 14px 32px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-contact:hover {
+    background-color: #f1f5f9;
+}
+
+.btn-contact:active {
+    transform: scale(0.98);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+/* Flexbox layout for columns grid */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* Brand Profile Column width setting */
+.footer-brand-col {
+    flex: 1;
+    min-width: 250px;
+    max-width: 320px;
+}
+
+/* Brand Header Area styles */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.icon-box {
+    width: 34px;
+    height: 34px;
+    background: rgba(56, 189, 248, 0.05);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box svg {
+    width: 18px;
+    height: 18px;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.blue-text {
+    color: #38bdf8;
+}
+
+.brand-desc {
+    color: #52525b;
+    /* Muted slate grey color */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Circular Social Links styling */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #52525b;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Link Columns block setup */
+.footer-links-col {
+    min-width: 160px;
+}
+
+/* Upper Column Headings styling */
+.footer-links-col h3 {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.footer-links-col ul {
+    list-style: none;
+}
+
+/* Spacing and typography match for links list */
+.footer-links-col ul li {
+    margin-bottom: 14px;
+}
+
+.footer-links-col ul li a {
+    color: #52525b;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-links-col ul li a:hover {
+    color: #38bdf8;
+    /* Soft blue on hover */
+}
+
+/* Bottom Border and Legal Layout styling */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright {
+    color: #42424a;
+    font-size: 13px;
+}
+
+.legal-links {
+    display: flex;
+    gap: 24px;
+}
+
+.legal-links a {
+    color: #42424a;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+    color: #ffffff;
+}
+
+.main-container {
+    margin-left: 10%;
+}
+
+.main {
+    margin-top: 7%;
+    width: 40%;
+}
+
+.allproduct {
+    margin-top: 4%;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+
+}
+
+.sub-heading {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+.catalog {
+    color: rgb(56, 189, 248);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.filterbycategory {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 4%;
+}
+
+.filterbybrand {
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    font-size: 13px;
+    margin-top: 1%;
+}
+
+.catbtn {
+    margin-top: 1%;
+}
+
+.brand-btn {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.brand-btn:active{
+    background-color: #ffffff;
+}
+
+.brand-btn.active-brand {
+    background: rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.5);
+    color: #38bdf8;
+}
+
+/* Product Card Main Container */
+.product-card {
+    background: rgba(255, 255, 255, 0.03);
+    /* Glass panel effect */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* Dynamic height matching grid cell */
+}
+
+/* Image Wrapper Box */
+.image-container {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    /* Makes it perfectly square */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.product-icon {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 60px;
+}
+
+/* Absolute Positioned Compare Badge */
+.compare-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.8);
+    /* Dark panel background */
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.compare-check {
+    cursor: pointer;
+}
+
+.compare-text {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Title & Brand Alignment */
+.title-brand-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.product-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.brand-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: rgba(56, 189, 248, 0.1);
+    /* Primary color low alpha */
+    color: #38bdf8;
+    /* Brand primary cyan */
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Product Description Description text */
+.product-desc {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* Ratings Section */
+.rating-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.star-icon {
+    color: #38bdf8;
+    /* Cyan star */
+    font-size: 12px;
+}
+
+.rating-val {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+/* Card Bottom Footer Line */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-label {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.price-value {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Pill Shape Inquire Button */
+.btn-inquire {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-inquire:hover {
+    background: #ffffff;
+    color: #020205;
+    /* Dark background color inverse */
+    border-color: #ffffff;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Is se image stretch nahi hogi aur container mein fit baithegi */
+    display: block;
+}
